@@ -1,0 +1,26 @@
+---
+title: "Counties"
+format: html
+editor: visual
+---
+
+
+```{r}
+library(tidyverse)
+#| echo: false
+#| output: false
+
+x <- read_rds("https://github.com/PPBDS/bootcamp/raw/master/_internal/ec.rds")
+
+x |> 
+  drop_na() |> 
+  ggplot(aes(x = pop2018)) +
+    geom_histogram(bins = 100) +
+    scale_x_log10(labels = scales::comma_format()) +
+    labs(title = "US County Populations in 2018",
+         subtitle = "Populations are highly skewed",
+         x = "Population",
+         y = "Number of Counties",
+         caption = "Opportunity Insights")
+```
+
