@@ -1,15 +1,19 @@
 ---
 title: "Counties"
-format: html
-editor: visual
+author: ksheehy
+date: 2023-01-26
 ---
 
 
 ```{r}
-library(tidyverse)
 #| echo: false
 #| output: false
+library(tidyverse)
 
+```
+
+```{r}
+#| echo: false
 x <- read_rds("https://github.com/PPBDS/bootcamp/raw/master/_internal/ec.rds")
 
 x |> 
