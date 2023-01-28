@@ -10,11 +10,11 @@ date: 2023-01-26
 #| output: false
 library(tidyverse)
 
+x <- read_rds("https://github.com/PPBDS/bootcamp/raw/master/_internal/ec.rds")
 ```
 
 ```{r}
 #| echo: false
-x <- read_rds("https://github.com/PPBDS/bootcamp/raw/master/_internal/ec.rds")
 
 x |> 
   drop_na() |> 
